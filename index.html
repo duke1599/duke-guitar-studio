@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Duke Guitar Studio | ลงทะเบียนเรียนกีตาร์</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero">
+        <div class="hero-visual" aria-hidden="true">
+          <div class="stage-lights"></div>
+          <div class="record"></div>
+          <div class="keyboard">
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <div class="guitar">
+            <div class="guitar-neck"></div>
+            <div class="guitar-body"></div>
+          </div>
+        </div>
+
+        <div class="hero-content">
+          <p class="eyebrow">Duke Guitar Studio</p>
+          <h1>ลงทะเบียนเรียนกีตาร์กับ Duke</h1>
+          <p class="intro">
+            เลือกเครื่องดนตรี ระดับความถนัด วันที่สะดวก และช่วงเวลาเรียนทีละ 1 ชั่วโมง
+          </p>
+
+          <div class="quick-stats" aria-label="ข้อมูลคอร์ส">
+            <div>
+              <strong>3</strong>
+              <span>เครื่องดนตรี</span>
+            </div>
+            <div>
+              <strong>3</strong>
+              <span>ระดับเรียน</span>
+            </div>
+            <div>
+              <strong>60</strong>
+              <span>นาทีต่อคลาส</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="workspace" aria-label="แบบฟอร์มลงทะเบียนเรียนดนตรี">
+        <aside class="course-panel">
+          <div class="panel-heading">
+            <p class="eyebrow">หลักสูตรยอดนิยม</p>
+            <h2>เลือกแนวที่ใช่</h2>
+          </div>
+
+          <div class="course-list">
+            <article class="course-card active" data-course="เบส">
+              <span class="course-icon">♬</span>
+              <div>
+                <h3>เบส</h3>
+                <p>กรูฟพื้นฐาน เดินเบส เล่นกับจังหวะ และคุมวงให้แน่น</p>
+              </div>
+            </article>
+            <article class="course-card" data-course="กีตาร์ไฟฟ้า">
+              <span class="course-icon">♩</span>
+              <div>
+                <h3>กีตาร์ไฟฟ้า</h3>
+                <p>ริฟฟ์ โซโล เทคนิคปิ๊ก เอฟเฟกต์ และการเล่นเป็นวง</p>
+              </div>
+            </article>
+            <article class="course-card" data-course="กีตาร์โปร่ง">
+              <span class="course-icon">♫</span>
+              <div>
+                <h3>กีตาร์โปร่ง</h3>
+                <p>ตีคอร์ด เกาเพลง จังหวะอะคูสติก และเล่นร้องคู่กัน</p>
+              </div>
+            </article>
+          </div>
+        </aside>
+
+        <form class="registration-form" id="registrationForm">
+          <div class="form-header">
+            <div>
+              <p class="eyebrow">ใบสมัครเรียน</p>
+              <h2>ข้อมูลผู้เรียน</h2>
+            </div>
+            <div class="badge">เปิดรับสมัคร</div>
+          </div>
+
+          <div class="form-grid">
+            <label for="studentName">
+              ชื่อ-นามสกุล
+              <input id="studentName" type="text" name="studentName" placeholder="เช่น พิมพ์ชนก ใจดี" required />
+            </label>
+            <label for="phone">
+              เบอร์โทรศัพท์
+              <input id="phone" type="tel" name="phone" placeholder="08x-xxx-xxxx" required />
+            </label>
+            <label for="email">
+              อีเมล
+              <input
+                id="email"
+                type="text"
+                inputmode="email"
+                name="email"
+                placeholder="name@example.com"
+                pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$"
+                required
+              />
+            </label>
+            <label for="age">
+              อายุผู้เรียน
+              <input
+                id="age"
+                type="text"
+                inputmode="numeric"
+                name="age"
+                placeholder="12"
+                pattern="^(?:[4-9]|[1-7][0-9]|80)$"
+                required
+              />
+            </label>
+          </div>
+
+          <div class="form-row">
+            <label for="instrument">
+              เครื่องดนตรี
+              <select name="instrument" id="instrument">
+                <option>เบส</option>
+                <option>กีตาร์ไฟฟ้า</option>
+                <option>กีตาร์โปร่ง</option>
+              </select>
+            </label>
+            <label for="level">
+              ระดับ
+              <select name="level" id="level">
+                <option>เริ่มต้น</option>
+                <option>เคยเรียนมาบ้าง</option>
+                <option>เตรียมสอบ/ประกวด</option>
+              </select>
+            </label>
+          </div>
+
+          <fieldset>
+            <legend>รูปแบบการเรียน</legend>
+            <div class="lesson-mode-options">
+              <label><input type="radio" name="lessonMode" value="เรียนออนไลน์" checked required /> เรียนออนไลน์</label>
+              <label><input type="radio" name="lessonMode" value="มาเรียนตัวต่อตัว" /> มาเรียนตัวต่อตัว</label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>วันที่สะดวก</legend>
+            <div class="slot-group">
+              <label><input type="checkbox" name="days" value="จันทร์" /> จันทร์</label>
+              <label><input type="checkbox" name="days" value="อังคาร" /> อังคาร</label>
+              <label><input type="checkbox" name="days" value="พุธ" /> พุธ</label>
+              <label><input type="checkbox" name="days" value="พฤหัสบดี" /> พฤหัสบดี</label>
+              <label><input type="checkbox" name="days" value="ศุกร์" /> ศุกร์</label>
+              <label><input type="checkbox" name="days" value="เสาร์" /> เสาร์</label>
+              <label><input type="checkbox" name="days" value="อาทิตย์" /> อาทิตย์</label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>ช่วงเวลาลงเรียน</legend>
+            <div class="time-options">
+              <label><input type="radio" name="time" value="11:00 - 12:00" checked required /> 11:00 - 12:00</label>
+              <label><input type="radio" name="time" value="12:00 - 13:00" /> 12:00 - 13:00</label>
+              <label><input type="radio" name="time" value="13:00 - 14:00" /> 13:00 - 14:00</label>
+              <label><input type="radio" name="time" value="14:00 - 15:00" /> 14:00 - 15:00</label>
+            </div>
+          </fieldset>
+
+          <label for="goal">
+            เป้าหมายในการเรียน
+            <textarea id="goal" name="goal" rows="4" placeholder="เช่น อยากเล่นเพลงโปรดให้ได้ภายใน 3 เดือน"></textarea>
+          </label>
+
+          <div class="actions">
+            <button type="reset" class="ghost-button">ล้างข้อมูล</button>
+            <button type="submit">ส่งใบสมัคร</button>
+          </div>
+        </form>
+
+        <section class="summary-panel" aria-live="polite">
+          <p class="eyebrow">สรุปการสมัคร</p>
+          <h2 id="summaryTitle">ยังไม่ได้ส่งใบสมัคร</h2>
+          <dl id="summaryList">
+            <div>
+              <dt>คอร์ส</dt>
+              <dd>เบส</dd>
+            </div>
+            <div>
+              <dt>ช่วงเวลาลงเรียน</dt>
+              <dd>เลือกได้ทีละ 1 ชั่วโมง ระหว่าง 11:00 - 15:00</dd>
+            </div>
+            <div>
+              <dt>รูปแบบการเรียน</dt>
+              <dd>เรียนออนไลน์ หรือ มาเรียนตัวต่อตัว</dd>
+            </div>
+            <div>
+              <dt>ค่าลงทะเบียน</dt>
+              <dd>1,200 บาท</dd>
+            </div>
+            <div>
+              <dt>ค่าเรียนต่อเดือน</dt>
+              <dd>1,600 บาท</dd>
+            </div>
+          </dl>
+          <p class="summary-note">
+            หลังส่งใบสมัคร เจ้าหน้าที่จะติดต่อกลับเพื่อยืนยันวันและช่วงเวลาเรียนที่เลือก
+          </p>
+        </section>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
