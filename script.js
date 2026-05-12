@@ -41,7 +41,6 @@ courseCards.forEach((card) => {
       { label: "คอร์ส", value: instrument },
       { label: "ช่วงเวลาลงเรียน", value: availableTimeText },
       { label: "รูปแบบการเรียน", value: "เรียนออนไลน์ หรือ มาเรียนตัวต่อตัว" },
-      { label: "ค่าลงทะเบียน", value: "1,200 บาท" },
       { label: "ค่าเรียนต่อเดือน", value: tuitionByInstrument[instrument] },
     ]);
   });
@@ -54,7 +53,6 @@ instrumentSelect.addEventListener("change", (event) => {
     { label: "คอร์ส", value: instrument },
     { label: "ช่วงเวลาลงเรียน", value: availableTimeText },
     { label: "รูปแบบการเรียน", value: "เรียนออนไลน์ หรือ มาเรียนตัวต่อตัว" },
-    { label: "ค่าลงทะเบียน", value: "1,200 บาท" },
     { label: "ค่าเรียนต่อเดือน", value: tuitionByInstrument[instrument] },
   ]);
 });
@@ -66,7 +64,6 @@ registrationForm.addEventListener("reset", () => {
       { label: "คอร์ส", value: "เบส" },
       { label: "ช่วงเวลาลงเรียน", value: availableTimeText },
       { label: "รูปแบบการเรียน", value: "เรียนออนไลน์ หรือ มาเรียนตัวต่อตัว" },
-      { label: "ค่าลงทะเบียน", value: "1,200 บาท" },
       { label: "ค่าเรียนต่อเดือน", value: "1,600 บาท" },
     ]);
   }, 0);
