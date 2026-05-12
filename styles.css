@@ -1,0 +1,488 @@
+:root {
+  --ink: #17202a;
+  --muted: #697381;
+  --paper: #fffaf1;
+  --panel: #ffffff;
+  --line: #e6ded0;
+  --accent: #c74f33;
+  --accent-dark: #8b2d20;
+  --mint: #2f8c74;
+  --gold: #d7a13f;
+  --shadow: 0 24px 70px rgba(38, 31, 24, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  font-family: Arial, "Noto Sans Thai", sans-serif;
+  background:
+    linear-gradient(135deg, rgba(47, 140, 116, 0.16), transparent 32%),
+    linear-gradient(315deg, rgba(199, 79, 51, 0.18), transparent 34%),
+    var(--paper);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.app-shell {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 40px;
+}
+
+.hero {
+  min-height: 390px;
+  display: grid;
+  grid-template-columns: minmax(300px, 0.95fr) 1fr;
+  align-items: stretch;
+  overflow: hidden;
+  border: 1px solid rgba(23, 32, 42, 0.1);
+  background: #231f20;
+  box-shadow: var(--shadow);
+}
+
+.hero-visual {
+  position: relative;
+  min-height: 360px;
+  background:
+    radial-gradient(circle at 25% 15%, rgba(215, 161, 63, 0.85), transparent 18%),
+    radial-gradient(circle at 72% 22%, rgba(47, 140, 116, 0.78), transparent 19%),
+    linear-gradient(145deg, #322a28, #15191c 72%);
+}
+
+.stage-lights {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(72deg, transparent 8%, rgba(215, 161, 63, 0.2) 22%, transparent 42%),
+    linear-gradient(112deg, transparent 44%, rgba(199, 79, 51, 0.2) 62%, transparent 78%);
+}
+
+.record {
+  position: absolute;
+  left: 11%;
+  bottom: 16%;
+  width: 170px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, #d7a13f 0 9%, #231f20 10% 18%, #111 19% 44%, #2e3034 45% 48%, #111 49% 100%);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.35);
+}
+
+.keyboard {
+  position: absolute;
+  right: 7%;
+  bottom: 14%;
+  width: 310px;
+  height: 92px;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 3px;
+  padding: 10px;
+  transform: rotate(-7deg);
+  background: #16191c;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.keyboard span {
+  display: block;
+  background: #fff8eb;
+  border-radius: 0 0 5px 5px;
+}
+
+.keyboard span:nth-child(2n) {
+  height: 58%;
+  background: #1d1f23;
+}
+
+.guitar {
+  position: absolute;
+  top: 19%;
+  right: 12%;
+  width: 230px;
+  height: 190px;
+  transform: rotate(18deg);
+}
+
+.guitar-neck {
+  position: absolute;
+  top: 72px;
+  left: 80px;
+  width: 160px;
+  height: 18px;
+  background: #b6783d;
+}
+
+.guitar-body {
+  position: absolute;
+  width: 110px;
+  aspect-ratio: 0.82;
+  border-radius: 48% 52% 44% 56%;
+  background: linear-gradient(135deg, #c74f33, #efb44a);
+  box-shadow: inset 0 0 0 16px rgba(255, 255, 255, 0.08);
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(28px, 5vw, 58px);
+  background: linear-gradient(135deg, rgba(255, 250, 241, 0.98), rgba(255, 250, 241, 0.88));
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: var(--accent-dark);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 14px;
+  font-size: clamp(2.4rem, 6vw, 5rem);
+  line-height: 1.02;
+}
+
+h2 {
+  margin-bottom: 0;
+  font-size: 1.5rem;
+}
+
+h3 {
+  margin-bottom: 4px;
+  font-size: 1rem;
+}
+
+.intro {
+  max-width: 560px;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.quick-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.quick-stats div {
+  padding: 14px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.quick-stats strong,
+.quick-stats span {
+  display: block;
+}
+
+.quick-stats strong {
+  font-size: 1.7rem;
+}
+
+.quick-stats span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: 310px minmax(0, 1fr) 280px;
+  gap: 18px;
+  margin-top: 22px;
+  align-items: start;
+}
+
+.course-panel,
+.registration-form,
+.summary-panel {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 16px 42px rgba(38, 31, 24, 0.08);
+}
+
+.course-panel,
+.summary-panel {
+  padding: 20px;
+}
+
+.panel-heading {
+  margin-bottom: 16px;
+}
+
+.course-list {
+  display: grid;
+  gap: 10px;
+}
+
+.course-card {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 12px;
+  padding: 13px;
+  border: 1px solid var(--line);
+  background: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.course-card:hover,
+.course-card.active {
+  transform: translateY(-2px);
+  border-color: rgba(199, 79, 51, 0.55);
+  background: #fff6eb;
+}
+
+.course-card p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.course-icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  color: #fff;
+  font-size: 1.35rem;
+  background: var(--mint);
+}
+
+.registration-form {
+  padding: 24px;
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.badge {
+  align-self: flex-start;
+  padding: 7px 10px;
+  color: #fff;
+  font-size: 0.86rem;
+  font-weight: 700;
+  background: var(--mint);
+}
+
+.form-grid,
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+label,
+legend {
+  color: #3d4550;
+  font-size: 0.93rem;
+  font-weight: 700;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px 13px;
+  color: var(--ink);
+  border: 1px solid #d9d0c2;
+  border-radius: 0;
+  background: #fff;
+  outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(199, 79, 51, 0.14);
+}
+
+.form-row,
+fieldset,
+textarea,
+.actions {
+  margin-top: 18px;
+}
+
+fieldset {
+  padding: 16px;
+  border: 1px solid var(--line);
+}
+
+.slot-group,
+.time-options,
+.lesson-mode-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.slot-group label,
+.time-options label,
+.lesson-mode-options label {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 40px;
+  padding: 8px 11px;
+  border: 1px solid var(--line);
+  background: #fffaf5;
+  font-weight: 600;
+}
+
+.slot-group input,
+.time-options input,
+.lesson-mode-options input {
+  width: auto;
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+button {
+  min-height: 46px;
+  padding: 0 18px;
+  color: #fff;
+  border: 0;
+  background: var(--accent);
+  cursor: pointer;
+  font-weight: 800;
+}
+
+button:hover {
+  background: var(--accent-dark);
+}
+
+.ghost-button {
+  color: var(--ink);
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.ghost-button:hover {
+  color: #fff;
+  background: #3a3f45;
+}
+
+.summary-panel {
+  position: sticky;
+  top: 18px;
+}
+
+.summary-panel h2 {
+  margin-bottom: 18px;
+}
+
+dl {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+}
+
+dl div {
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+dt {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+dd {
+  margin: 4px 0 0;
+  font-weight: 800;
+}
+
+.summary-note {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 980px) {
+  .hero,
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-panel {
+    position: static;
+  }
+}
+
+@media (max-width: 620px) {
+  .app-shell {
+    width: min(100% - 20px, 1180px);
+    padding-top: 10px;
+  }
+
+  .hero-content,
+  .registration-form,
+  .course-panel,
+  .summary-panel {
+    padding: 18px;
+  }
+
+  .hero-visual {
+    min-height: 270px;
+  }
+
+  .keyboard {
+    right: 2%;
+    width: 230px;
+  }
+
+  .guitar {
+    right: 2%;
+  }
+
+  .quick-stats,
+  .form-grid,
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-header,
+  .actions {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+}
